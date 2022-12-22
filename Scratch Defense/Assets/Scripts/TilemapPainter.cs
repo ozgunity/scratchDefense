@@ -5,6 +5,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+[ExecuteAlways]
 public class TilemapPainter : MonoBehaviour
 {
     public Tile darkBLue;
@@ -15,13 +16,17 @@ public class TilemapPainter : MonoBehaviour
     public Vector3Int enemySpawnPoint;
     public Vector3Int finishLine;
 
-
+    
+    void Awake()
+    {
+        PaintTiles();
+    }
     void Start()
     {
-        PaintOnStart();
+        
     }
 
-    void PaintOnStart()
+    void PaintTiles()
     {
         for (int k = 0; k <= 9; k++)
         {
