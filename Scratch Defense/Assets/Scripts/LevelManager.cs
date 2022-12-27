@@ -17,31 +17,31 @@ public class LevelManager : MonoBehaviour
     }
     void DrawLevel()
     {
-        for(int k=0; k<10; k++)
+        for(int k=0; k<12; k++)
         {
             for (int i = 0; i < 23; i++)
             {
                 if(i % 2 == 0 && k % 2 == 0)
                 {
-                    pos = new Vector3(i - 11, k - 4.5f, 0);
+                    pos = new Vector3(i - 11, k - 5, 0);
                     var tile = Instantiate(darkBlue, pos, Quaternion.identity);
                     tile.transform.parent = gameObject.transform;
-                    tile.name = (i - 11 + " , " + (k - 4.5f));
+                    tile.name = (i - 11 + " , " + (k - 5));
                 }
                 else if(i % 2 != 0 && k % 2 != 0)
                 {
-                    pos = new Vector3(i - 11, k - 4.5f, 0);
+                    pos = new Vector3(i - 11, k - 5, 0);
                     var tile = Instantiate(darkBlue, pos, Quaternion.identity);
                     tile.transform.parent = gameObject.transform;
-                    tile.name = (i - 11 + " , " + (k - 4.5f));
+                    tile.name = (i - 11 + " , " + (k - 5));
                 }
 
                 else
                 {
-                    pos = new Vector3(i - 11, k - 4.5f, 0);
+                    pos = new Vector3(i - 11, k - 5, 0);
                     var tile = Instantiate(lightBlue, pos, Quaternion.identity);
                     tile.transform.parent = gameObject.transform;
-                    tile.name = (i - 11 + " , " + (k - 4.5f));
+                    tile.name = (i - 11 + " , " + (k - 5f));
                 }
             }
         }
