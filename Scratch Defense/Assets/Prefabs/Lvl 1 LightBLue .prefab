@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7815858090975623120}
   - component: {fileID: 6653894134165013606}
   m_Layer: 0
-  m_Name: Lvl 1 DarkBLue
+  m_Name: 'Lvl 1 LightBLue '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5841769452044107897}
+  - {fileID: 7792100950448151273}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c99f97df4943c8e43a61ceabf5f3af51, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3a3185ea8f06604b8c0e6ffbfdc4e45, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &5448222888795705764
+--- !u!1 &3535452112335813471
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,10 +93,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5841769452044107897}
-  - component: {fileID: 5355876445568720174}
-  - component: {fileID: 7440390071825581376}
-  - component: {fileID: 3564319838449268564}
+  - component: {fileID: 7792100950448151273}
+  - component: {fileID: 1468177222370921227}
+  - component: {fileID: 6538887431674804117}
+  - component: {fileID: 7981954575575486098}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -104,13 +104,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &5841769452044107897
+--- !u!224 &7792100950448151273
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5448222888795705764}
+  m_GameObject: {fileID: 3535452112335813471}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -124,13 +124,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!23 &5355876445568720174
+--- !u!23 &1468177222370921227
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5448222888795705764}
+  m_GameObject: {fileID: 3535452112335813471}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -166,13 +166,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7440390071825581376
+--- !u!114 &6538887431674804117
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5448222888795705764}
+  m_GameObject: {fileID: 3535452112335813471}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
@@ -195,8 +195,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294902272
-  m_fontColor: {r: 0, g: 0.008023739, b: 1, a: 1}
+    rgba: 4294908928
+  m_fontColor: {r: 0, g: 0.10866976, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -256,15 +256,15 @@ MonoBehaviour:
   _SortingLayerID: 0
   _SortingOrder: 0
   m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 5355876445568720174}
+  m_renderer: {fileID: 1468177222370921227}
   m_maskType: 0
---- !u!114 &3564319838449268564
+--- !u!114 &7981954575575486098
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5448222888795705764}
+  m_GameObject: {fileID: 3535452112335813471}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc50be516c702604a9f562d5f9be46a7, type: 3}

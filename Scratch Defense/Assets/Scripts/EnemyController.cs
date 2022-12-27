@@ -10,16 +10,6 @@ public class EnemyController : MonoBehaviour
 
     private int waypointIndex = 0;
 
-    
-    
-    
-    void Start()
-    {
-        
-        
-    }
-
-    
     void Update()
     {
         Move();
@@ -28,8 +18,6 @@ public class EnemyController : MonoBehaviour
     {
         if (waypointIndex <= waypoints.Length - 1)
         {
-
-
             transform.position = Vector2.MoveTowards(transform.position,
                waypoints[waypointIndex].transform.position,
                moveSpeed * Time.deltaTime);
