@@ -1,32 +1,68 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    //[SerializeField]
+    //private Transform[] waypoints;
+    //private float moveSpeed = 2f;
+
     [SerializeField]
-    private Transform[] waypoints;
-    private float moveSpeed = 2f;
+    private GameObject waypointPrefab;
 
-    private int waypointIndex = 0;
+    private GameObject[] pathItems;
+    private GameObject[] waypoints;
+    //private int waypointIndex = 0;
 
+    private void Start()
+    {
+        
+    }
     void Update()
     {
-        Move();
+        MarkPositions();
+        //Move();
     }
-    private void Move()
+    //private void Move()
+    //{
+    //    if (waypointIndex <= waypoints.Length - 1)
+    //    {
+    //        transform.position = Vector2.MoveTowards(transform.position,
+    //           waypoints[waypointIndex].transform.position,
+    //           moveSpeed * Time.deltaTime);
+
+
+    //        if (transform.position == waypoints[waypointIndex].transform.position)
+    //        {
+    //            waypointIndex += 1;
+    //        }
+    //    }
+    //}
+
+    void MarkPositions()
     {
-        if (waypointIndex <= waypoints.Length - 1)
+        pathItems = GameObject.FindGameObjectsWithTag("Path");
+        waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
+        GameObject wp;
+        foreach (GameObject obj in pathItems)
         {
-            transform.position = Vector2.MoveTowards(transform.position,
-               waypoints[waypointIndex].transform.position,
-               moveSpeed * Time.deltaTime);
-
-
-            if (transform.position == waypoints[waypointIndex].transform.position)
+            if(waypoints.Length<253) //make a const with tile list(create one) length
             {
-                waypointIndex += 1;
+                wp = Instantiate(waypointPrefab, obj.transform.position, Quaternion.identity);
+                wp.transform.parent = gameObject.transform;
             }
+            
+        }
+    }
+
+    void FollowPath(Array paths)
+    {
+        float distance;
+        foreach(Transform pathTransform in paths)
+        {
+            distance = Vector2.Distance(transform.position, pathTransform.position);
         }
     }
 }
